@@ -113,4 +113,15 @@ function performCalculation()
     }
 
     calculator.displayNumber = result;
+
+    // kirim ke putHistory() pada storage.js
+    const history = {
+        firstNumber:calculator.firstNumber,
+        secondNumber:calculator.displayNumber,
+        operator:calculator.operator,
+        result: result
+    }
+    putHistory(history);
+    calculator.displayNumber =result;
+    renderHistory();
 }
