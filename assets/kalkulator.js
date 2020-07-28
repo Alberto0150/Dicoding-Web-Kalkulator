@@ -41,6 +41,25 @@ for (let button of buttons)
             updateDisplay();
             return;
         }
+        
+        if(target.classList.contains('negative')) {
+            inverseNumber();
+            updateDisplay();
+            return;
+        }
+
+        if(target.classList.contains('equals')) {
+            performCalculation();
+            updateDisplay();
+            return;
+        }
+
+        if(target.classList.contains('operator')){
+            handleOperator(target.innerText);
+            updateDisplay();
+            return;
+        }
+
         inputDigit(target.innerText);
         updateDisplay();
     });
