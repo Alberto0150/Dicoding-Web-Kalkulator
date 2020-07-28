@@ -8,7 +8,7 @@ function putHistory(data){
     if(checkForStorage())
     {
         let historyData = null;
-        if(localStorage.getItem(CACHE_KEY)=== null)
+        if(localStorage.getItem(CACHE_KEY) === null)
         {
             historyData = [];
         }
@@ -27,7 +27,7 @@ function putHistory(data){
             //menghapus nilai index terakhir pada array
         }
 
-        localStorage.setItem(CACHE_KEY, json.stringify(historyData));
+        localStorage.setItem(CACHE_KEY, JSON.stringify(historyData));
         //mengubah objek js ke dalam bentuk string KARNA localstorage hanya bisa menyimpan data primitif
     }
 }

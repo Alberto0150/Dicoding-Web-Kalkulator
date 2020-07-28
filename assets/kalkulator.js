@@ -103,7 +103,7 @@ function performCalculation()
 
     let result = 0;
 
-    if(calculator.operator ==="+")
+    if(calculator.operator === "+")
     {
         result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
     }
@@ -112,16 +112,16 @@ function performCalculation()
         result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
     }
 
-    calculator.displayNumber = result;
+    
 
     // kirim ke putHistory() pada storage.js
     const history = {
-        firstNumber:calculator.firstNumber,
-        secondNumber:calculator.displayNumber,
-        operator:calculator.operator,
+        firstNumber: calculator.firstNumber,
+        secondNumber: calculator.displayNumber,
+        operator: calculator.operator,
         result: result
     }
     putHistory(history);
-    calculator.displayNumber =result;
+    calculator.displayNumber = result;
     renderHistory();
 }
